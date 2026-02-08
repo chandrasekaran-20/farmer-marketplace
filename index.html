@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free Farmer Marketplace - Connect directly with farmers">
+    <meta name="theme-color" content="#2e7d32">
+    <link rel="manifest" href="manifest.json">
+    <title>Farmer Marketplace - Free Digital Platform for Farmers</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="page active">
+        <div class="landing-container">
+            <div class="landing-card">
+                <div class="logo">
+                    <div class="logo-icon">🌾</div>
+                    <h1>Farmer Marketplace</h1>
+                    <p class="tagline">Connecting Farmers Directly to Buyers</p>
+                    <p class="subtitle">100% Free • No Commission • No Intermediaries</p>
+                </div>
+                
+                <div class="landing-buttons">
+                    <button id="farmer-login-btn" class="btn btn-primary btn-large">
+                        <span class="btn-icon">🚜</span>
+                        Farmer Login
+                    </button>
+                    <button id="buyer-browse-btn" class="btn btn-secondary btn-large">
+                        <span class="btn-icon">🛒</span>
+                        Browse Products
+                    </button>
+                    <button id="farmer-register-btn" class="btn btn-outline btn-large">
+                        <span class="btn-icon">📝</span>
+                        New Farmer? Register Free
+                    </button>
+                </div>
+
+                <div class="landing-features">
+                    <div class="feature">
+                        <span class="feature-icon">✅</span>
+                        <span>100% Free</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🌍</span>
+                        <span>Multilingual</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature-icon">🔒</span>
+                        <span>Secure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Farmer Registration Page -->
+    <div id="farmer-registration-page" class="page">
+        <nav class="navbar">
+            <button id="back-to-landing-reg" class="btn btn-back">← Back</button>
+            <h2>Farmer Registration</h2>
+            <div></div>
+        </nav>
+        
+        <div class="container">
+            <div class="form-card">
+                <h1>Register as Farmer</h1>
+                <p class="form-description">Join our free marketplace - No charges, No commission!</p>
+                
+                <form id="farmer-registration-form">
+                    <div class="form-group">
+                        <label for="reg-name">Full Name *</label>
+                        <input type="text" id="reg-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg-mobile">Mobile Number *</label>
+                        <input type="tel" id="reg-mobile" pattern="[0-9]{10}" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg-email">Email</label>
+                        <input type="email" id="reg-email">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reg-country">Country *</label>
+                            <select id="reg-country" required>
+                                <option value="India">India</option>
+                                <option value="USA">USA</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reg-pin">PIN Code *</label>
+                            <input type="text" id="reg-pin" pattern="[0-9]{6}" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg-aadhaar">Last 4 digits of Aadhaar (Optional)</label>
+                        <input type="text" id="reg-aadhaar" pattern="[0-9]{4}" maxlength="4">
+                        <small class="form-hint">For identity verification only. Not stored permanently.</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg-username">Username *</label>
+                        <input type="text" id="reg-username" required minlength="4">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg-password">Password *</label>
+                        <input type="password" id="reg-password" required minlength="6">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="reg-confirm-password">Confirm Password *</label>
+                        <input type="password" id="reg-confirm-password" required minlength="6">
+                    </div>
+                    
+                    <div class="security-questions">
+                        <h3>Security Questions for Password Recovery</h3>
+                        
+                        <div class="form-group">
+                            <label for="security-q1">Security Question 1 *</label>
+                            <select id="security-q1" required>
+                                <option value="">Select Question</option>
+                                <option value="mother">What is your mother's maiden name?</option>
+                                <option value="pet">What was your first pet's name?</option>
+                                <option value="school">What is your primary school name?</option>
+                                <option value="village">What is your native village/town?</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="security-a1">Answer 1 *</label>
+                            <input type="text" id="security-a1" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="security-q2">Security Question 2 *</label>
+                            <select id="security-q2" required>
+                                <option value="">Select Question</option>
+                                <option value="color">What is your favorite color?</option>
+                                <option value="food">What is your favorite food crop?</option>
+                                <option value="city">In which city were you born?</option>
+                                <option value="teacher">Who was your favorite teacher?</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="security-a2">Answer 2 *</label>
+                            <input type="text" id="security-a2" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="privacy-consent" required>
+                            I agree to the <a href="#" id="privacy-link">Privacy Policy</a> and <a href="#" id="terms-link">Terms & Conditions</a>
+                        </label>
+                    </div>
+                    
+                    <div class="form-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="aadhaar-consent">
+                            I consent to providing last 4 digits of Aadhaar for identity verification
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Register Free</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Farmer Login Page -->
+    <div id="farmer-login-page" class="page">
+        <nav class="navbar">
+            <button id="back-to-landing-login" class="btn btn-back">← Back</button>
+            <h2>Farmer Login</h2>
+            <div></div>
+        </nav>
+        
+        <div class="container">
+            <div class="form-card">
+                <h1>Welcome Back, Farmer!</h1>
+                
+                <form id="farmer-login-form">
+                    <div class="form-group">
+                        <label for="login-username">Username</label>
+                        <input type="text" id="login-username" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Login</button>
+                    
+                    <p class="form-footer">
+                        <a href="#" id="forgot-password-link">Forgot Password?</a><br>
+                        <a href="#" id="goto-register-from-login">New Farmer? Register Free</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Recovery Page -->
+    <div id="password-recovery-page" class="page">
+        <nav class="navbar">
+            <button id="back-to-login-recovery" class="btn btn-back">← Back</button>
+            <h2>Password Recovery</h2>
+            <div></div>
+        </nav>
+        
+        <div class="container">
+            <div class="form-card">
+                <h1>Recover Your Password</h1>
+                <p class="form-description">Answer your security questions to reset password</p>
+                
+                <form id="password-recovery-form">
+                    <div class="form-group">
+                        <label for="recovery-username">Username</label>
+                        <input type="text" id="recovery-username" required>
+                    </div>
+                    
+                    <button type="button" id="verify-username-btn" class="btn btn-secondary">Verify Username</button>
+                    
+                    <div id="security-questions-section" style="display:none;">
+                        <div class="form-group">
+                            <label id="recovery-q1-label">Security Question 1</label>
+                            <input type="text" id="recovery-a1" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label id="recovery-q2-label">Security Question 2</label>
+                            <input type="text" id="recovery-a2" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="recovery-new-password">New Password</label>
+                            <input type="password" id="recovery-new-password" required minlength="6">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="recovery-confirm-password">Confirm New Password</label>
+                            <input type="password" id="recovery-confirm-password" required minlength="6">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Reset Password</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Farmer Dashboard -->
+    <div id="farmer-dashboard-page" class="page">
+        <nav class="navbar">
+            <h2>🌾 Farmer Dashboard</h2>
+            <div class="nav-right">
+                <span id="farmer-name" class="user-name"></span>
+                <button id="farmer-logout-btn" class="btn btn-secondary">Logout</button>
+            </div>
+        </nav>
+        
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Welcome, <span id="dashboard-farmer-name"></span>!</h1>
+                <button id="add-product-btn" class="btn btn-primary">+ Add Product</button>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📦</div>
+                    <div class="stat-value" id="total-products">0</div>
+                    <div class="stat-label">Total Products</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👁️</div>
+                    <div class="stat-value" id="total-views">0</div>
+                    <div class="stat-label">Total Views</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📞</div>
+                    <div class="stat-value" id="total-inquiries">0</div>
+                    <div class="stat-label">Inquiries</div>
+                </div>
+            </div>
+            
+            <div class="products-section">
+                <h2>My Products</h2>
+                <div id="farmer-products-grid" class="products-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Product Page -->
+    <div id="add-product-page" class="page">
+        <nav class="navbar">
+            <button id="back-to-dashboard" class="btn btn-back">← Back</button>
+            <h2>Add Product</h2>
+            <div></div>
+        </nav>
+        
+        <div class="container">
+            <div class="form-card">
+                <h1>List Your Product</h1>
+                <p class="form-description">Add your agricultural product - No image upload needed!</p>
+                
+                <form id="add-product-form">
+                    <div class="form-group">
+                        <label for="product-name">Product Name *</label>
+                        <input type="text" id="product-name" required placeholder="e.g., Organic Rice, Fresh Tomatoes">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-category">Category *</label>
+                        <select id="product-category" required>
+                            <option value="">Select Category</option>
+                            <option value="grains">Grains & Cereals</option>
+                            <option value="vegetables">Vegetables</option>
+                            <option value="fruits">Fruits</option>
+                            <option value="pulses">Pulses & Legumes</option>
+                            <option value="dairy">Dairy Products</option>
+                            <option value="spices">Spices & Herbs</option>
+                            <option value="organic">Organic Products</option>
+                            <option value="seeds">Seeds & Saplings</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="product-quantity">Quantity Available *</label>
+                            <input type="number" id="product-quantity" required min="1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="product-unit">Unit *</label>
+                            <select id="product-unit" required>
+                                <option value="kg">Kilograms (kg)</option>
+                                <option value="quintal">Quintal</option>
+                                <option value="ton">Ton</option>
+                                <option value="liter">Liter</option>
+                                <option value="piece">Piece</option>
+                                <option value="dozen">Dozen</option>
+                                <option value="bag">Bag</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-price">Price per Unit (₹) *</label>
+                        <input type="number" id="product-price" required min="1" step="0.01">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-description">Description</label>
+                        <textarea id="product-description" rows="4" placeholder="Quality, farming method, certification, etc."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="product-location">Location/Village *</label>
+                        <input type="text" id="product-location" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">List Product</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buyer Browse Page -->
+    <div id="buyer-browse-page" class="page">
+        <nav class="navbar">
+            <button id="back-to-landing-browse" class="btn btn-back">← Back</button>
+            <h2>Browse Products</h2>
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Search products...">
+            </div>
+        </nav>
+        
+        <div class="container">
+            <div class="filter-section">
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="grains">Grains & Cereals</option>
+                    <option value="vegetables">Vegetables</option>
+                    <option value="fruits">Fruits</option>
+                    <option value="pulses">Pulses & Legumes</option>
+                    <option value="dairy">Dairy Products</option>
+                    <option value="spices">Spices & Herbs</option>
+                    <option value="organic">Organic Products</option>
+                    <option value="seeds">Seeds & Saplings</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <select id="sort-filter">
+                    <option value="newest">Newest First</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                </select>
+            </div>
+            
+            <div id="buyer-products-grid" class="products-grid"></div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="product-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div id="product-detail-content"></div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
