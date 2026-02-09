@@ -1,7 +1,7 @@
 {
   "name": "Farmer Marketplace",
   "short_name": "FarmerHub",
-  "description": "Free digital marketplace connecting farmers directly with buyers",
+  "description": "Free digital marketplace for farmers",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#2e7d32",
@@ -12,13 +12,6 @@
       "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>",
       "sizes": "192x192",
       "type": "image/svg+xml"
-    },
-    {
-      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌾</text></svg>",
-      "sizes": "512x512",
-      "type": "image/svg+xml"
     }
-  ],
-  "categories": ["agriculture", "marketplace", "business"],
-  "lang": "en-IN"
+  ]
 }
